@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title%></title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="/weui/dist/style/weui.min.css"/>
+    <link rel="stylesheet" href="/CSS/jobdetail.css"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="job_det">
+        <div class="job_det_top">
+            <span class="job_name"><%=job.jobname%></span>
+            <span class="update_time"><%=job.submission_time%>刷新</span>
+        </div>
+        <div class="job_det_mid">
+            <span class="daymoney"><%=job.salary%> 丨</span>
+            <span class="city" ><%=job.city%> 丨</span>
+            <span class="days"><%=job.time%>丨</span>
+            <span class="month"><%=job.peroid%></span>
+        </div>
+        <p class="job_description">职位描述</p>
+        <div class="job_content">
+            <span style="color:#555555;font-size:14px;background-color:#ffffff;">
+                <%=job.intro%>
+            </span>
+        </div>
+    </div>
+</div>
+</body>
+<script  type="text/javascript">
+</script>
+</html>

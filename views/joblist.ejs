@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title%></title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="/weui/dist/style/weui.min.css"/>
+    <link rel="stylesheet" href="/CSS/common.css"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="list-group">
+    <a href="#" class="list-group-item active">
+        <h4 class="list-group-item-heading">
+            内推列表
+        </h4>
+    </a>
+    <% joblist.forEach(function(job){  %>
+    <a href="/detail/<%= job.id %>"  >
+        <div class="job_inf">
+            <div>
+                <div class="jobname">
+                    <h3 >
+                        <%=job.jobname%>
+                    </h3>
+                    <p class="list-group-item-text">
+                        <%= job.company %>
+                    </p>
+                </div>
+
+                <p class="money_inf">
+                <span class="addr_box" title="<%=job.city%>">
+                    <span><%=job.city%></span>
+                </span>
+                <span class="money_box">
+                    <%=job.salary%>
+                </span>
+                <span class="day_box"><%=job.time%>
+                </span>
+                <span class="time_box"><%=job.submission_time%>
+                </span>
+                </p>
+            </div>
+
+        </div>
+
+    </a>
+    <% });%>
+</div>
+</body>
+<script  type="text/javascript">
+</script>
+</html>

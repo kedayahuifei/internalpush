@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title%></title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="/weui/dist/style/weui.min.css"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="hole">
+    <form class="form-horizontal" id="jobform" name="jobform" method="post">
+        <div class="weui_cells weui_cells_form">
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">实习公司</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input"id="company"  name="company"  placeholder="请输入公司名称">
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">职位名称</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" id="job"  name="job" placeholder="请输入职位名称">
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">实习城市</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" id="city"  name="city" placeholder="请输入实习城市">
+                </div>
+            </div>
+            <div class="weui_cell weui_cell_select">
+                <div class="weui_cell_hd weui_cell_primary">
+                    <select class="weui_select" id="time" name="time">
+                        <option selected="" value="1">每周实习天数</option>
+                        <option value="2">每周实习天数  1天</option>
+                        <option value="3">每周实习天数  2天</option>
+                        <option value="4">每周实习天数  3天 </option>
+                        <option value="5">每周实习天数  4天</option>
+                        <option value="6">每周实习天数  5天</option>
+                        <option value="7">每周实习天数  6天 </option>
+                        <option value="8">每周实习天数  7天 </option>
+                    </select>
+                </div>
+            </div>
+            <div class="weui_cell weui_cell_select">
+                <div class="weui_cell_hd weui_cell_primary">
+                    <select class="weui_select" id="peroid" name="peroid">
+                        <option selected="" value="1">实习周期</option>
+                        <option value="2">实习周期 3个月 </option>
+                        <option value="3">实习周期 3-6个月 </option>
+                        <option value="4">实习周期 6个月以上 </option>
+                    </select>
+                </div>
+            </div>
+            <div class="weui_cell weui_cell_select">
+                <div class="weui_cell_hd weui_cell_primary">
+                    <select class="weui_select" id="salary" name="salary">
+                        <option selected="" value="1">实习薪资</option>
+                        <option value="2">实习薪资 ￥100/天以下</option>
+                        <option value="3">实习薪资 ￥100-200/天 </option>
+                        <option value="4">实习薪资 ￥200-300/天 </option>
+                        <option value="5">实习薪资 ￥300-400/天 </option>
+                        <option value="6">实习薪资  ￥400/天以上 </option>
+                    </select>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <textarea class="weui_textarea" id="intro"  name="intro" placeholder="请输入职位描述（工作职责、职位要求等，下拉点内推）" rows="50"></textarea>
+                    <div class="weui_textarea_counter"><span>0</span>/1000</div>
+                </div>
+            </div>
+            <button type="button" id="push"  onclick="check()" class="weui_btn weui_btn_primary">
+                <span class="bigger-110">内推</span>
+            </button>
+        </div>
+    </form>
+    <div class="weui_dialog_alert" id="dialog" style="display: none;">
+        <div class="weui_mask"></div>
+        <div class="weui_dialog">
+            <div class="weui_dialog_hd"><strong class="weui_dialog_title">提示</strong></div>
+            <div class="weui_dialog_bd">请确认信息填写完整</div>
+            <div class="weui_dialog_ft">
+                <a href="#" class="weui_btn_dialog primary" onclick="hide()">确定</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script  type="text/javascript">
+
+    function hide(){
+
+        var dialog=document.getElementById("dialog");
+        dialog.style.display="none";
+    }
+    function check(){
+        var valid = true;
+        var company=$('#company').val();
+        var jobname=$('#job').val();
+        var city=$('#city').val();
+        var time=$('#time').val();
+        var salary=$('#salary').val();
+        var peroid=$('#peroid').val();
+        var intro=$('#intro').val();
+        var dialog=document.getElementById("dialog");
+
+        console.log(company);
+        console.log(jobname);
+        console.log(city);
+        console.log(time);
+        console.log(salary);
+        console.log(peroid);
+        console.log(intro);
+        if(company==''){
+            var valid = false;
+            dialog.style.display="block";
+        }
+        if(jobname==''){
+            var valid = false;
+            dialog.style.display="block";
+        }
+        if(city==''){
+            var valid = false;
+            dialog.style.display="block";
+        }
+        if(time=='1'){
+            var valid = false;
+            dialog.style.display="block";
+        }
+        if(salary=='1'){
+            var valid = false;
+            dialog.style.display="block";
+        }
+        if(peroid=='1'){
+            console.log("peroid");
+            dialog.style.display="block";
+        }
+        if(intro==''){
+            var valid = false;
+            dialog.style.display="block";
+        }
+        if(valid)
+            document.jobform.submit();
+    }
+</script>
+</html>

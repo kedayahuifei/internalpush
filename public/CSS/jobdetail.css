@@ -1,0 +1,90 @@
+.job_det{
+    width:100%;
+    background: #fff;
+    overflow: hidden;
+    height: auto;
+}
+.job_det_top{
+    width:100%;
+    height: 72px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px 0 10px;
+    position: relative;
+}
+.job_name{
+    color: #02a0e9;
+    font-size: 24px;
+
+    width: 60%;
+    position: absolute;
+    top:24px;
+
+}
+.update_time{
+    font-size: 14px;
+    color: #999999;
+    position: absolute;
+    top: 29px;
+    right: 3%;
+}
+.job_det_mid{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto;
+    padding: 30px 0 30px 0;
+    position: relative;
+}
+.job_det_mid span{
+    width: 25%;
+    font-size: 16px;
+    color: #333;
+    padding: 0 0 0 22px;
+
+}
+.job_det_mid .daymoney{
+    width: 16px;
+
+    background: url("http://www.sxsimg.com/static/img/xiangqing.png") no-repeat;
+    background-position: 0 -3px;
+
+
+}
+.city{
+    width: 16px;
+    background: url("http://www.sxsimg.com/static/img/xiangqing.png") no-repeat;
+    background-position: 0 -25px;
+}
+.days{
+    width: 16px;
+    background: url("http://www.sxsimg.com/static/img/xiangqing.png") no-repeat;
+    background-position: 0 -66px;
+
+
+}
+.month{
+    width: 16px;
+    background: url("http://www.sxsimg.com/static/img/xiangqing.png") no-repeat;
+    background-position: 0 -87px;
+
+
+}
+.job_det_mid p{
+
+    color: #555;
+    margin:40px 0 0 0;
+}
+.job_description{
+     font-size: 16px;
+     color: #333;
+     font-weight: 500;
+     margin: 30px 0 0 30px;
+ }
+.job_content{
+    font-size: 14px;
+    color: #555;
+    display: block;
+
+    margin: 30px 40px 0 30px;
+
+}

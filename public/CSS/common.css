@@ -1,0 +1,49 @@
+.job_inf{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.job_inf:hover {
+    box-shadow: 0 0 9px 1px #ddd;
+}
+.job_inf > div {
+    margin: 0 0 0 20px;
+}
+.job_inf> div p {
+    margin: 5px 0 0 0;
+}
+.job_inf> div p span {
+    color: #96999e;
+}
+.job_inf > div .money_inf {
+    position: absolute;
+    left: 38%;
+    top: 50%;
+    color: #447791;
+}
+.jobname{
+    position:relative;
+    top:-5px
+}
+.money_box {
+    display: inline-block;
+    width: 75px;
+}
+.day_box {
+    display: inline-block;
+    width: 75px;
+}
+.addr_box {
+    display: inline-block;
+    width: 295px;
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap:normal;
+}
